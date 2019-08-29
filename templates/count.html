@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Your Text is :</h1>
+    <p>{{fulltext}}</p>
+    <h2>There are {{count}} word in Your Text</h2>
+
+    <a href="{% url 'home' %}">SATRT AGAIN</a>
+   <table border=".6">
+     <thead>
+       <th>Name</th>
+       <th>HomMany</th>
+     </thead>
+     {% for key, value in wordcitionary.items %}
+      <tr>
+         <td>{{key}}</td>
+         <td>{{value}}</td>
+      </tr>
+      {% endfor %}
+   </table>
+
+   <form action="{% url 'about'%}">
+     <input type="submit" name="about" value="aboutME">
+   </form>
+
+  </body>
+</html>
